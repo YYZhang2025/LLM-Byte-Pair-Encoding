@@ -6,10 +6,8 @@ def get_stats(ids, counts=None):
     Count the number of pair occurrences in a list of ids.
     """
     counts = {} if counts is None else counts
-
-    for pair in zip(ids, ids[1:]):
+    for pair in zip(ids, ids[1:]):  # iterate consecutive elements
         counts[pair] = counts.get(pair, 0) + 1
-
     return counts
 
 
